@@ -1,0 +1,135 @@
+body {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    background: #FF5F6D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FF5F6D, #FFC371);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    margin: 5% auto;
+    padding: 0;
+    max-width: 25%;
+    min-width: 500px;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.done {
+    color: #a0a0a0;
+    text-decoration: line-through;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top: none;
+}
+
+ul li {
+    list-style-type: none;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    transition: 0.3s;
+}
+
+ul li:nth-of-type(2n+1) {
+    background: #eeeeee;
+}
+
+ul li:nth-of-type(2n) {
+    background: #ffffff;
+}
+
+ul li:hover .delete {
+    opacity: 1;
+    width: 50px;
+}
+
+#todo {
+    padding: 13px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 22px;
+    display: inline-block;
+    width: 85%;
+    height: 60px;
+}
+
+#todo:focus {
+    outline: none;
+    border-color: rgba(255, 95, 109, 0.7);
+    box-shadow: 0 0 15px rgba(255, 95, 109, 0.7);
+}
+
+.todo-wrap {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin: 0;
+    padding: 0 0 0 15px;
+    line-height: 60px;
+    background: rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+#btnDeleteAll, #btnAdd {
+    height: 60px;
+    width: 15%;
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    color: #dddddd;
+    line-height: 60px;
+    text-align: center;
+}
+
+#btnAdd {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#btnDeleteAll:hover, #btnAdd:hover {
+    color: #ffffff;
+}
+
+.delete {
+    background: rgba(255, 95, 109, 0.7);
+    opacity: 0;
+    width: 0px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 13px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+#info{
+  background: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  padding-left: 15px;
+  display: block;
+  line-height: 30px;
+}
+
+@media screen and (max-width:768px  ) {
+    .container {
+        min-width: 70%;
+    }
+}
+
+@media screen and (max-width:480px  ) {
+    .container {
+        min-width: 90%;
+        font-size: 5vw;
+    }
+
+}
